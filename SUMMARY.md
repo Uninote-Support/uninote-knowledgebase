@@ -32,7 +32,7 @@
 * [フォルダ（ミーティングの置き場）を作成する](forudamtingunokiwosuru.md)
 * [アカウントの名前を変更するにはどうすればいいですか？](akauntonowosurunihadousurebaiidesuka.md)
 * [FAQ テンプレート](faq-tenpurto.md)
-* [WIP)文言確認\_ダウングレードや支払いサイクルの変更はすぐに反映されますか？](wipdaungurdoyaisaikurunohasugunisaremasuka.md)
+* [ダウングレードや支払いサイクルの変更はすぐに反映されますか？](wipdaungurdoyaisaikurunohasugunisaremasuka.md)
 * [料金は従量課金（ユーザー数）ですか？](hayzdesuka.md)
 * [WIP仕様確認中)プランの比較と機能一覧](wippurannoto.md)
 * [パスワードを忘れてしまったときはどうすればいいですか？](pasuwdoworeteshimattatokihadousurebaiidesuka.md)
