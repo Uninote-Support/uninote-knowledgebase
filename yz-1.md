@@ -21,14 +21,14 @@
 1. ［ユーザー］画面を開きます。
 2.  ［＋ユーザー追加］を選びます。<br>
 
-    <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * メールで招待する
   1.  ［送信］を選び、招待するメールアドレスを入力します。<br>
 
-      <figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
   2. 必要に応じてロールを設定します。
   3.  ［招待］をクリックして完了です。
 
@@ -41,7 +41,7 @@
 * CSVで一括招待する
   1.  ［CSV］を選びます。<br>
 
-      <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
   2. ［CSVテンプレートをダウンロード］からテンプレートをダウンロードし、作成します。
   3. CSVをアップロードします。
   4. ［CSVを処理］をクリックして完了です。
@@ -51,7 +51,7 @@
 * 招待リンクで追加する
   1.  ［リンク］を選びます。<br>
 
-      <figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
   2. ［Copy］を押して、対象者に共有します。
 
 {% hint style="info" %}
