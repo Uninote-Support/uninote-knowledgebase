@@ -22,7 +22,7 @@
 * [スタートガイド テンプレート](suttogaido-tenpurto.md)
 * [ロール（権限）の種類と違いは何ですか？](rrunotoihadesuka.md)
 * [ユーザー追加（招待）](yz-1.md)
-* [WIP仕様確認中)モニター画面の使い方](wipmonitnoi.md)
+* [モニター画面の使い方](wipmonitnoi.md)
 * [録画の最大時間はどのくらいですか？](nohadonokuraidesuka.md)
 * [クレジットはどのように消費されますか？](kurejittohadonoyounisaremasuka.md)
 * [フォルダを編集・削除する](forudawosuru.md)
