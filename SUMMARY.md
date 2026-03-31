@@ -10,7 +10,7 @@
 * [エディター](edit.md)
 * [ライセンス](raisensu.md)
 * [Google Microsoft アカウントでログインした場合、パスワードは設定できますか？](google-microsoft-akauntoderoguinshitapasuwdohadekimasuka.md)
-* [WIP仕様確認中)ユーザーグループを設定する](wipyzgurpuwosuru.md)
+* [ユーザーグループを設定する](wipyzgurpuwosuru.md)
 * [WIP)文言確認\_プランをダウングレードするにはどうすればいいですか？](wippuranwodaungurdosurunihadousurebaiidesuka.md)
 * [タグを作成・管理する](taguwosuru.md)
 * [組織を作成する](wosuru.md)
