@@ -1,8 +1,8 @@
 # 招待を受けたら、どうやってログインしますか？
 
-👤
-
+{% hint style="info" %}
 このページは、管理者から招待を受けた方向けのガイドです。
+{% endhint %}
 
 ## A. 招待メールまたは招待URLからアカウントを登録してログインします。
 
@@ -15,10 +15,14 @@
 
        件名：`Invitation to join ｛組織名｝`　 送信元：`noreply@mail.uninote.ai`
    * **招待URLを受け取った場合**：URLをブラウザで開きます。
-2. ［新規登録］をクリックします。
+2.  ［新規登録］をクリックします。<br>
+
+    <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 3. 登録方法を選択します。
    * メールアドレスで登録する場合：姓名・メールアドレス・パスワードを入力し、認証メール（件名：`Verify your Uninote account`）のリンクをクリックする
-   * Google / Microsoft アカウントで登録する場合：「Googleでサインイン」または「Microsoftでサインイン」を選択し、アカウントを許可する
+   *   Google / Microsoft アカウントで登録する場合：「Googleでサインイン」または「Microsoftでサインイン」を選択し、アカウントを許可する<br>
+
+       <figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
