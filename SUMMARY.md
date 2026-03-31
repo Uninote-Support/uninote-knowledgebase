@@ -15,7 +15,7 @@
 * [タグを作成・管理する](taguwosuru.md)
 * [組織を作成する](wosuru.md)
 * [フォーマットを設定する](fmattowosuru.md)
-* [カレンダーを同期する（Google Microsoft）](karendwosurugoogle-microsoft.md)
+* [カレンダーを同期する（Google /Microsoft）](karendwosurugoogle-microsoft.md)
 * [辞書に単語を登録する](niwosuru.md)
 * [ストレージが上限に達したらどうなりますか？](sutorjiganishitaradounarimasuka.md)
 * [プライバシーポリシー](puraibashporish.md)
