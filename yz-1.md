@@ -1,12 +1,12 @@
 # ユーザー追加（招待）
 
-💡
-
+{% hint style="info" icon="lightbulb" %}
 ユーザーの追加（招待）には、次の3つの方法があります。
 
 * メール招待（少人数向け）
 * CSV一括（まとめて追加したい場合）
 * 招待リンク（リンク配布で参加してもらう場合）
+{% endhint %}
 
 ***
 
@@ -26,8 +26,9 @@
 ***
 
 * メールで招待する
-  1. ［送信］を選び、招待するメールアドレスを入力します。\
-     ![](<.gitbook/assets/image (1).png>)
+  1.  ［送信］を選び、招待するメールアドレスを入力します。<br>
+
+      <figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
   2. 必要に応じてロールを設定します。
   3.  ［招待］をクリックして完了です。
 
@@ -38,8 +39,9 @@
 ***
 
 * CSVで一括招待する
-  1. ［CSV］を選びます。\
-     ![](<.gitbook/assets/image (2).png>)
+  1.  ［CSV］を選びます。<br>
+
+      <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
   2. ［CSVテンプレートをダウンロード］からテンプレートをダウンロードし、作成します。
   3. CSVをアップロードします。
   4. ［CSVを処理］をクリックして完了です。
@@ -47,8 +49,9 @@
 ***
 
 * 招待リンクで追加する
-  1. ［リンク］を選びます。\
-     ![](<.gitbook/assets/image (4).png>)
+  1.  ［リンク］を選びます。<br>
+
+      <figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
   2. ［Copy］を押して、対象者に共有します。
 
 {% hint style="info" %}
