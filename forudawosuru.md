@@ -8,13 +8,13 @@
 ### 手順：フォルダを編集する
 
 1. ［ミーティング］画面を開きます。
-2.  編集したいフォルダにカーソルを合わせ、［…］（メニュー）をクリックします。<br>
+2.  編集したいフォルダにカーソルを合わせ、［…］（メニュー）をクリックします。<br />
 
-    <figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image (26).png" alt="" /><figcaption></figcaption></figure>
 3. ［編集］を選択します。
-4.  フォルダ名やフォルダメンバーを変更し、更新します。<br>
+4.  フォルダ名やフォルダメンバーを変更し、更新します。<br />
 
-    <figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image (27).png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
@@ -24,9 +24,9 @@
 
 
 1. ［ミーティング］画面を開きます。
-2.  削除したいフォルダにカーソルを合わせ、［…］（メニュー）をクリックします。<br>
+2.  削除したいフォルダにカーソルを合わせ、［…］（メニュー）をクリックします。<br />
 
-    <figure><img src=".gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image (28).png" alt="" /><figcaption></figcaption></figure>
 3. ［削除］を選択して完了です。
 
 ***
