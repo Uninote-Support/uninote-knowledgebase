@@ -1,8 +1,7 @@
 # 組織を作成する
 
-{% hint style="info" icon="lightbulb" %}
-Uninoteのアカウントを作成し、ワークスペース（組織）を立ち上げる手順を説明します。
-{% endhint %}
+<Note>Uninoteのアカウントを作成し、ワークスペース（組織）を立ち上げる手順を説明します。</Note>
+
 
 ***
 
