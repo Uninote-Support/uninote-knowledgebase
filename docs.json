@@ -8,6 +8,8 @@
               },
               "navigation": {
                               "groups": [
+                                                { "group": "ホーム", "pages": ["index"] 
+                                                },
                                                 {
                                                                     "group": "はじめに",
                                                                     "pages": [
