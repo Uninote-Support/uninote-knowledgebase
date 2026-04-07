@@ -12,7 +12,7 @@ Botをミーティングに入室させる方法は2つあります。
 
 ### 方法①：カレンダー連携を使う（自動入室）
 
-1. あらかじめ[カレンダー連携を設定](https://www.notion.so/Google-Microsoft-3112eae039e4824f91bb0159bafc2ef7?pvs=21)しておきます。
+1. あらかじめ[カレンダー連携を設定](/ja/karendwosurugoogle-microsoft)しておきます。
 2. ミーティング開始時刻になると、BotがミーティングURLへ自動的に参加を試みます。
 3. ミーティング内に表示される「承認」をクリックすると、Botが入室します。
 
@@ -45,5 +45,5 @@ Botをミーティングに入室させる方法は2つあります。
 
 ## 関連ページ
 
-* [カレンダーを同期する](https://www.notion.so/Google-Microsoft-3112eae039e4824f91bb0159bafc2ef7?pvs=21)
-* [録画の最大時間はどのくらいですか？](https://www.notion.so/7be2eae039e482f3b77c012e6df974e6?pvs=21)
+* [カレンダーを同期する](/ja/karendwosurugoogle-microsoft)
+* [録画の最大時間はどのくらいですか？](/ja/nohadonokuraidesuka)
