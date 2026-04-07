@@ -12,81 +12,118 @@
     "primary": "#5B4CFF"
   },
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "ホーム",
-        "pages": [
-          "index"
+        "tab": "日本語",
+        "groups": [
+          {
+            "group": "ホーム",
+            "pages": [
+              "ja/index"
+            ]
+          },
+          {
+            "group": "スタートガイド",
+            "pages": [
+              "ja/wosuru",
+              "ja/yz-1",
+              "ja/karendwosurugoogle-microsoft",
+              "ja/forudamtingunokiwosuru",
+              "ja/fmattowosuru"
+            ]
+          },
+          {
+            "group": "アカウント・ログイン",
+            "pages": [
+              "ja/akauntonowosurunihadousurebaiidesuka",
+              "ja/woketaradouyatteroguinshimasuka",
+              "ja/pasuwdoworeteshimattatokihadousurebaiidesuka",
+              "ja/google-microsoft-akauntoderoguinshitapasuwdohadekimasuka",
+              "ja/rrunotoihadesuka",
+              "ja/she-ding"
+            ]
+          },
+          {
+            "group": "カレンダー・ミーティング",
+            "pages": [
+              "ja/karend",
+              "ja/mtingu",
+              "ja/monit",
+              "ja/edit",
+              "ja/taguwosuru",
+              "ja/forudawosuru",
+              "ja/niwosuru",
+              "ja/botnotononitsuite"
+            ]
+          },
+          {
+            "group": "AI・フォーマット",
+            "pages": [
+              "ja/puronputotokasutamufrudonoihanandesuka",
+              "ja/hayzdesuka"
+            ]
+          },
+          {
+            "group": "プラン・請求",
+            "pages": [
+              "ja/li-yong-gui-yue",
+              "ja/nohadonokuraidesuka",
+              "ja/kurejittohadonoyounisaremasuka",
+              "ja/puranwodeshitahadousaremasuka",
+              "ja/raisensu"
+            ]
+          },
+          {
+            "group": "WIPページ",
+            "pages": [
+              "ja/wipdaungurdoyaisaikurunohasugunisaremasuka",
+              "ja/wipmonitnoi",
+              "ja/wippurannoto",
+              "ja/wippuranwodaungurdosurunihadousurebaiidesuka",
+              "ja/wipyzgurpuwosuru"
+            ]
+          },
+          {
+            "group": "その他",
+            "pages": [
+              "ja/sutorjiganishitaradounarimasuka",
+              "ja/puraibashporish",
+              "ja/yz",
+              "ja/SUMMARY"
+            ]
+          }
         ]
       },
       {
-        "group": "スタートガイド",
-        "pages": [
-          "wosuru",
-          "yz-1",
-          "karendwosurugoogle-microsoft",
-          "forudamtingunokiwosuru",
-          "fmattowosuru"
-        ]
-      },
-      {
-        "group": "アカウント・ログイン",
-        "pages": [
-          "akauntonowosurunihadousurebaiidesuka",
-          "woketaradouyatteroguinshimasuka",
-          "pasuwdoworeteshimattatokihadousurebaiidesuka",
-          "google-microsoft-akauntoderoguinshitapasuwdohadekimasuka",
-          "rrunotoihadesuka",
-          "she-ding"
-        ]
-      },
-      {
-        "group": "カレンダー・ミーティング",
-        "pages": [
-          "karend",
-          "mtingu",
-          "monit",
-          "edit",
-          "taguwosuru",
-          "forudawosuru",
-          "niwosuru",
-          "botnotononitsuite"
-        ]
-      },
-      {
-        "group": "AI・フォーマット",
-        "pages": [
-          "puronputotokasutamufrudonoihanandesuka",
-          "hayzdesuka"
-        ]
-      },
-      {
-        "group": "プラン・請求",
-        "pages": [
-          "li-yong-gui-yue",
-          "nohadonokuraidesuka",
-          "kurejittohadonoyounisaremasuka",
-          "puranwodeshitahadousaremasuka",
-          "raisensu"
-        ]
-      },
-      {
-        "group": "WIPページ",
-        "pages": [
-          "wipdaungurdoyaisaikurunohasugunisaremasuka",
-          "wipmonitnoi",
-          "wippurannoto",
-          "wippuranwodaungurdosurunihadousurebaiidesuka",
-          "wipyzgurpuwosuru"
-        ]
-      },
-      {
-        "group": "その他",
-        "pages": [
-          "sutorjiganishitaradounarimasuka",
-          "puraibashporish",
-          "yz",
-          "SUMMARY"
+        "tab": "English",
+        "groups": [
+          {
+            "group": "Home",
+            "pages": [
+              "en/index"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "en/getting-started",
+              "en/calendar",
+              "en/ai-format"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "pages": [
+              "en/account",
+              "en/billing"
+            ]
+          },
+          {
+            "group": "FAQ",
+            "pages": [
+              "en/faq"
+            ]
+          }
         ]
       }
     ]

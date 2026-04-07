@@ -2,38 +2,32 @@
 title: Uninote ご利用ガイド
 ---
 
-このページは、Uninoteの管理者向けヘルプセンターです。目的に合わせて、下の入口から探してください。こちらのページでも解決しない場合は、support@widsley.comまでお問合せください。ご利用ガイドは予告なく随時更新されます。
+このページは、Uninoteの管理者向けヘルプセンターです。
+目的に合わせて、下の入口から探してください。
+こちらのページでも解決しない場合は、support@widsley.com までお問合せください。
 
----
+## カテゴリ
 
-### 管理者向けスタートガイド
+{% content-ref url="ja/wosuru.md" %}
+[スタートガイド](ja/wosuru.md)
+{% endcontent-ref %}
 
-0️⃣ [**組織を作成する**](wosuru)
+{% content-ref url="ja/karend.md" %}
+[カレンダー・ミーティング](ja/karend.md)
+{% endcontent-ref %}
 
-1️⃣ [**ユーザーを追加する**](yz-1)
+{% content-ref url="ja/puronputotokasutamufrudonoihanandesuka.md" %}
+[AI・フォーマット](ja/puronputotokasutamufrudonoihanandesuka.md)
+{% endcontent-ref %}
 
-2️⃣ [**カレンダーを同期する**](karendwosurugoogle-microsoft)
+{% content-ref url="ja/li-yong-gui-yue.md" %}
+[プラン・請求](ja/li-yong-gui-yue.md)
+{% endcontent-ref %}
 
-3️⃣ [**フォルダを作成する**](forudamtingunokiwosuru)
+{% content-ref url="ja/akauntonowosurunihadousurebaiidesuka.md" %}
+[アカウント・ログイン](ja/akauntonowosurunihadousurebaiidesuka.md)
+{% endcontent-ref %}
 
-4️⃣ [**要約フォーマットを設定する**](fmattowosuru)
-
----
-
-### よくある質問
-
-❓ [**招待されたら最初にすること（ログイン方法）**](woketaradouyatteroguinshimasuka)
-
-❓ [**ロール（権限）の種類と違いは何ですか？**](rrunotoihadesuka)
-
-❓ [**パスワードを忘れてしまったときはどうすればいいですか？**](pasuwdoworeteshimattatokihadousurebaiidesuka)
-
-➡️ [**FAQ一覧を見る**](faq-yi-lan)
-
----
-
-### 利用規約・ポリシー
-
-- [利用規約](https://www.notion.so/9402eae039e48389814e818692ac6b96?pvs=21)
-- - [プライバシーポリシー](https://www.notion.so/47d2eae039e4830c946e811f408d4c5f?pvs=21)
-  - 
+{% content-ref url="ja/faq-yi-lan.md" %}
+[よくある質問](ja/faq-yi-lan.md)
+{% endcontent-ref %}
