@@ -3,8 +3,13 @@
   "theme": "mint",
   "name": "Uninote ヘルプ",
   "locale": "ja",
+  "logo": {
+    "light": "/logo.png",
+    "dark": "/logo-white.png"
+  },
+  "favicon": "/icon.png",
   "colors": {
-    "primary": "#00BCD4"
+    "primary": "#5B4CFF"
   },
   "navigation": {
     "groups": [
