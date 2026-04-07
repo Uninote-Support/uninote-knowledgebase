@@ -24,20 +24,35 @@
         "tab": "English",
         "groups": [
           {
-            "group": "Home",
+            "group": "ホーム",
             "pages": [
               "en/index"
             ]
           },
           {
-            "group": "Help Articles",
+            "group": "スタートガイド",
             "pages": [
-              "en/account",
-              "en/ai-format",
-              "en/billing",
-              "en/calendar",
-              "en/faq",
-              "en/getting-started"
+              "en/wosuru",
+              "en/yz-1",
+              "en/karendwosurugoogle-microsoft",
+              "en/forudamtingunokiwosuru",
+              "en/fmattowosuru"
+            ]
+          },
+          {
+            "group": "アカウント・ログイン",
+            "pages": [
+              "en/akauntonowosurunihadousurebaiidesuka",
+              "en/woketaradouyatteroguinshimasuka",
+              "en/pasuwdoworeteshimattatokihadousurebaiidesuka"
+            ]
+          },
+          {
+            "group": "カレンダー・ミーティング",
+            "pages": [
+              "en/taguwosuru",
+              "en/forudawosuru",
+              "en/niwosuru"
             ]
           }
         ]
