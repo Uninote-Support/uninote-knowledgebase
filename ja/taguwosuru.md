@@ -13,6 +13,6 @@ title: タグを作成・管理する
 2. ［タグ］を選びます。
 3.  ［＋新しいタグ］をクリックします。
 
-    ![image.png](<.gitbook/assets/image (5) (1).png>)
+    ![image.png](<../.gitbook/assets/image (5) (1).png>)
 4. タグ名を入力します。
 5. ［作成］して完了です。

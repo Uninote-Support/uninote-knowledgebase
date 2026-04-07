@@ -1,4 +1,4 @@
-name: Fix GitBook H1 Duplicates
+name: Fix GitBook Sync (H1, frontmatter, move to ja/, fix image paths)
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  fix-h1:
+  fix-gitbook:
     runs-on: ubuntu-latest
     if: |
       contains(github.event.head_commit.message, 'GITBOOK-') &&
-      !contains(github.event.head_commit.message, 'auto: remove duplicate H1')
+      !contains(github.event.head_commit.message, 'auto:')
     permissions:
       contents: write
 
@@ -20,54 +20,85 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Remove duplicate H1 headings
+      - name: Process GitBook sync
         run: |
           python3 - << 'PYEOF'
-          import os
-          import re
+          import os, re, shutil
 
-          def fix_file(content):
-              """frontmatterにtitle:がある場合、直後のH1を削除する"""
+          SKIP_FILES = {'README.md', 'SUMMARY.md'}
+
+          # ── 1. SUMMARY.mdからタイトルマッピングを作成 ──
+          summary_map = {}
+          if os.path.exists('SUMMARY.md'):
+              with open('SUMMARY.md', 'r', encoding='utf-8') as f:
+                  for line in f:
+                      m = re.search(r'\[(.+?)\]\((.+?)\)', line)
+                      if m:
+                          title, path = m.group(1), m.group(2)
+                          fname = os.path.basename(path)
+                          summary_map[fname] = title
+              print(f"SUMMARY map: {len(summary_map)} entries")
+
+          # ── 2. ルートのmdファイルをja/に移動 ──
+          os.makedirs('ja', exist_ok=True)
+          moved = 0
+          for fname in os.listdir('.'):
+              if not fname.endswith('.md') or fname in SKIP_FILES:
+                  continue
+              src = fname
+              dst = os.path.join('ja', fname)
+              shutil.move(src, dst)
+              moved += 1
+              print(f"  Moved: {fname} -> ja/{fname}")
+          print(f"Moved {moved} files to ja/")
+
+          # ── 3. ja/内の全mdファイルを処理 ──
+          fixed_count = 0
+          for fname in os.listdir('ja'):
+              if not fname.endswith('.md'):
+                  continue
+              path = os.path.join('ja', fname)
+              with open(path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              changed = False
+
+              # 3a. フロントマターがなければ追加
               if not content.startswith('---'):
-                  return content, False
-              end = content.find('\n---', 3)
-              if end == -1:
-                  return content, False
-              frontmatter = content[:end + 4]
-              body = content[end + 4:]
-              if not re.search(r'^title:', frontmatter, re.MULTILINE):
-                  return content, False
-              body_fixed = re.sub(r'^\n*# .+\n?', '\n', body, count=1)
-              if body_fixed == body:
-                  return content, False
-              return frontmatter + body_fixed, True
+                  title = summary_map.get(fname, fname.replace('.md', '').replace('-', ' ').title())
+                  content = f'---\ntitle: {title}\n---\n\n{content}'
+                  changed = True
 
-          count = 0
-          for root, dirs, files in os.walk('.'):
-              dirs[:] = [d for d in dirs if d not in ['.git', 'node_modules', '.gitbook', '.mintlify']]
-              for fname in files:
-                  if not fname.endswith('.md'):
-                      continue
-                  path = os.path.join(root, fname)
-                  try:
-                      with open(path, 'r', encoding='utf-8') as f:
-                          content = f.read()
-                      fixed, changed = fix_file(content)
-                      if changed:
-                          with open(path, 'w', encoding='utf-8') as f:
-                              f.write(fixed)
-                          count += 1
-                          print(f'Fixed: {path}')
-                  except Exception as e:
-                      print(f'Error {path}: {e}')
+              # 3b. フロントマターにtitleがあればH1を削除
+              if content.startswith('---'):
+                  end = content.find('\n---', 3)
+                  if end != -1:
+                      frontmatter = content[:end + 4]
+                      body = content[end + 4:]
+                      if re.search(r'^title:', frontmatter, re.MULTILINE):
+                          body_fixed = re.sub(r'^\n*# .+\n?', '\n', body, count=1)
+                          if body_fixed != body:
+                              content = frontmatter + body_fixed
+                              changed = True
 
-          print(f'Total: {count} files fixed')
+              # 3c. 画像パスを修正（.gitbook/ -> ../.gitbook/）
+              if '.gitbook/assets/' in content and '../.gitbook/assets/' not in content:
+                  content = content.replace('.gitbook/assets/', '../.gitbook/assets/')
+                  changed = True
+
+              if changed:
+                  with open(path, 'w', encoding='utf-8') as f:
+                      f.write(content)
+                  fixed_count += 1
+                  print(f"  Fixed: {fname}")
+
+          print(f"Total: {fixed_count} files processed")
           PYEOF
 
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ] || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
@@ -75,5 +106,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "auto: remove duplicate H1 from GitBook sync"
+          git commit -m "auto: process GitBook sync (move to ja/, fix H1, fix image paths)"
           git push

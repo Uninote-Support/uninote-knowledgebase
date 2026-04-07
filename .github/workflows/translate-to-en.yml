@@ -1,0 +1,192 @@
+name: Translate JA to EN
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ja/**.md'
+  workflow_dispatch:
+    inputs:
+      translate_all:
+        description: 'Translate all ja/ files (not just changed ones)'
+        type: boolean
+        default: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    if: |
+      !contains(github.event.head_commit.message, 'auto:')
+    permissions:
+      contents: write
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Translate changed files
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python3 - << 'PYEOF'
+          import os, sys, json, glob
+          from openai import OpenAI
+
+          client = OpenAI()
+
+          TRANSLATE_ALL = os.environ.get("TRANSLATE_ALL", "false") == "true"
+
+          # ── 変更されたja/ファイルを検出 ──
+          if TRANSLATE_ALL:
+              files = glob.glob("ja/*.md")
+              print(f"Translate ALL: {len(files)} files")
+          else:
+              import subprocess
+              result = subprocess.run(
+                  ["git", "diff", "--name-only", "HEAD~1", "HEAD", "--", "ja/"],
+                  capture_output=True, text=True
+              )
+              files = [f for f in result.stdout.strip().split("\n") if f.endswith(".md") and os.path.exists(f)]
+              print(f"Changed files: {len(files)}")
+
+          if not files:
+              print("No ja/ files to translate.")
+              sys.exit(0)
+
+          os.makedirs("en", exist_ok=True)
+
+          SYSTEM_PROMPT = """You are a professional translator for a SaaS product help center (Uninote).
+          Translate the following Japanese markdown document to natural, professional English.
+
+          Rules:
+          - Preserve ALL markdown syntax exactly (headings, links, images, code blocks, frontmatter)
+          - Translate the frontmatter 'title' and 'description' fields
+          - Do NOT translate URLs, file paths, image paths, or code
+          - Do NOT add or remove any content
+          - Keep the same document structure
+          - Use clear, concise technical English suitable for admin users
+          - Product name "Uninote" should NOT be translated
+          - Return ONLY the translated markdown, no explanations"""
+
+          translated = 0
+          failed = 0
+
+          for filepath in files:
+              fname = os.path.basename(filepath)
+              en_path = os.path.join("en", fname)
+
+              try:
+                  with open(filepath, "r", encoding="utf-8") as f:
+                      content = f.read()
+
+                  if len(content.strip()) < 10:
+                      print(f"  Skip (too short): {fname}")
+                      continue
+
+                  print(f"  Translating: {fname}...", end=" ", flush=True)
+
+                  response = client.chat.completions.create(
+                      model="gpt-4o-mini",
+                      messages=[
+                          {"role": "system", "content": SYSTEM_PROMPT},
+                          {"role": "user", "content": content}
+                      ],
+                      temperature=0.3,
+                      max_tokens=4096
+                  )
+
+                  translated_content = response.choices[0].message.content
+
+                  # Clean up: remove ```markdown wrapper if present
+                  if translated_content.startswith("```markdown"):
+                      translated_content = translated_content[len("```markdown"):].strip()
+                  if translated_content.startswith("```"):
+                      translated_content = translated_content[3:].strip()
+                  if translated_content.endswith("```"):
+                      translated_content = translated_content[:-3].strip()
+
+                  with open(en_path, "w", encoding="utf-8") as f:
+                      f.write(translated_content + "\n")
+
+                  translated += 1
+                  print("OK")
+
+              except Exception as e:
+                  failed += 1
+                  print(f"FAILED: {e}")
+
+          print(f"\nDone: {translated} translated, {failed} failed")
+          PYEOF
+
+      - name: Update docs.json navigation for en/
+        run: |
+          python3 - << 'PYEOF'
+          import os, json, re
+
+          # Read current docs.json
+          with open("docs.json", "r", encoding="utf-8") as f:
+              docs = json.load(f)
+
+          # Collect all en/*.md files
+          en_files = sorted([
+              f.replace(".md", "")
+              for f in os.listdir("en")
+              if f.endswith(".md") and f != "index.md"
+          ])
+
+          if not en_files:
+              print("No en/ files found, skipping nav update")
+              exit(0)
+
+          # Build en page list with en/ prefix
+          en_pages = [f"en/{f}" for f in en_files]
+
+          # Find the English tab in navigation
+          tabs = docs.get("navigation", {}).get("tabs", [])
+          en_tab = None
+          for tab in tabs:
+              if tab.get("tab") == "English":
+                  en_tab = tab
+                  break
+
+          if en_tab:
+              # Update English tab with all translated pages
+              en_tab["groups"] = [
+                  {
+                      "group": "Home",
+                      "pages": ["en/index"]
+                  },
+                  {
+                      "group": "Help Articles",
+                      "pages": en_pages
+                  }
+              ]
+
+              with open("docs.json", "w", encoding="utf-8") as f:
+                  json.dump(docs, f, ensure_ascii=False, indent=2)
+                  f.write("\n")
+
+              print(f"Updated English nav with {len(en_pages)} pages")
+          else:
+              print("English tab not found in docs.json")
+          PYEOF
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ] || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "auto: translate ja/ to en/"
+          git push

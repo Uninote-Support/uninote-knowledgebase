@@ -12,25 +12,25 @@ title: 組織を作成する
 #### 1. アカウントを作成する
 
 1. Uninoteのサインアップページにアクセスし、［新規登録］をクリックします。\
-   ![](<.gitbook/assets/image (2).png>)
+   ![](<../.gitbook/assets/image (2).png>)
 2. 登録方法を選択します。\
-   ![](<.gitbook/assets/image (1) (1) (1) (1).png>)
+   ![](<../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 * メールアドレスで登録する場合
   1. 姓名とメールアドレスとパスワードを入力し、［登録］をクリックします\
-     ![](<.gitbook/assets/image (2) (1).png>)
+     ![](<../.gitbook/assets/image (2) (1).png>)
   2.  登録したメールアドレスに届く認証メールのリンクをクリックする
 
       📧 件名：`Verify your Uninote account`　送信元：`no-reply@mail.uninote.ai`
 * Google / Microsoft アカウントで登録する場合
   1. 「Googleでサインイン」または「Microsoftでサインイン」を選択します。\
-     ![](<.gitbook/assets/image (3).png>)
+     ![](<../.gitbook/assets/image (3).png>)
   2. 使用するアカウントを選んで許可します。
 
 #### 2. 組織を作成する
 
 1. ログイン後、ワークスペース作成画面が表示されます。\
-   ![](<.gitbook/assets/image (4).png>)
+   ![](<../.gitbook/assets/image (4).png>)
 2. 項目を入力し、［開始］をクリックします。
 
 ***
