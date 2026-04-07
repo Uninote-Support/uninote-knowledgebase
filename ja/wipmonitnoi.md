@@ -18,4 +18,4 @@ title: モニター画面の使い方
 
 ## 関連ページ
 
-* [録画Botの入室方法と録画時間の上限について](https://www.notion.so/Bot-f022eae039e48251bdf281a107808869?pvs=21)
+* [録画Botの入室方法と録画時間の上限について](/ja/botnotononitsuite)

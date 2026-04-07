@@ -35,4 +35,4 @@ title: フォルダを編集・削除する
 
 ### 関連ページ
 
-* [フォルダ（ミーティングの置き場）を作成する](https://www.notion.so/9c92eae039e4829eaadf81f7f94dff9d?pvs=21)
+* [フォルダ（ミーティングの置き場）を作成する](/ja/forudamtingunokiwosuru)

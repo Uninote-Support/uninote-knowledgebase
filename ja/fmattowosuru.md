@@ -85,5 +85,5 @@ title: フォーマットを設定する
 
 ### さらに活用する
 
-* 🏷️ [**タグを作成・管理する**](https://www.notion.so/1772eae039e48212956b01962ed13ea0?pvs=21)
-* 📚 [**辞書に単語を登録する**](https://www.notion.so/50f2eae039e48258b8fd015e1c00abc6?pvs=21)
+* 🏷️ [**タグを作成・管理する**](/ja/taguwosuru)
+* 📚 [**辞書に単語を登録する**](/ja/niwosuru)
