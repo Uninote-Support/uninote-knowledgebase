@@ -2,8 +2,6 @@
 title: カレンダーを同期する（Google /Microsoft）
 ---
 
-# カレンダーを同期する（Google Microsoft）
-
 <Note>Uninoteでカレンダーを同期すると、予定の取り込みや関連機能が使えるようになります。</Note>
 
 この記事ではGoogleカレンダー／Microsoft 365の連携手順をまとめます。
