@@ -13,7 +13,7 @@ title: 辞書に単語を登録する
 2. ［辞書］を選びます。
 3.  ［＋新しい単語］をクリックします。<br>
 
-    <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="/images/image (25).png" alt=""><figcaption></figcaption></figure>
 4. 検索ワードと置換テキストを入力します。
    * 例：製品名、部署名、人名、略称
 5. ［作成］して完了です。

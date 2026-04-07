@@ -14,14 +14,14 @@ title: カレンダーを同期する（Google /Microsoft）
 1. ［カレンダー］画面を開きます。
 2.  ［接続］を選びます。<br />
 
-    <figure><img src="../.gitbook/assets/image (6).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (6).png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
 * Google カレンダーを同期する
   1.  Googleカレンダーの［接続］をクリックします。<br />
 
-      <figure><img src="../.gitbook/assets/image (8).png" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="/images/image (8).png" alt="" /><figcaption></figcaption></figure>
   2. Googleアカウントでログインします。
   3. アクセス権限の確認画面が出たら許可します。
 
@@ -30,7 +30,7 @@ title: カレンダーを同期する（Google /Microsoft）
 * Microsoft 365 カレンダーを同期する
   1.  Microsoftカレンダーの［接続］をクリックします。<br />
 
-      <figure><img src="../.gitbook/assets/image (9).png" alt="" /><figcaption></figcaption></figure>
+      <figure><img src="/images/image (9).png" alt="" /><figcaption></figcaption></figure>
   2. Microsoftアカウントでログインします。
   3. 組織の承認が必要な場合は、管理者に許可を依頼します。
 
@@ -44,7 +44,7 @@ title: カレンダーを同期する（Google /Microsoft）
 1. ［ミーティング］画面を開きます。
 2.  ［＋新しいミーティング］をクリックします。<br />
 
-    <figure><img src="../.gitbook/assets/image (10).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (10).png" alt="" /><figcaption></figcaption></figure>
 3. 会議情報を入力します。
    * ミーティングURL
    * タイトル

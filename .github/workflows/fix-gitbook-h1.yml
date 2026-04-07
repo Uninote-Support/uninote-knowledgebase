@@ -81,9 +81,10 @@ jobs:
                               content = frontmatter + body_fixed
                               changed = True
 
-              # 3c. 画像パスを修正（.gitbook/ -> ../.gitbook/）
-              if '.gitbook/assets/' in content and '../.gitbook/assets/' not in content:
-                  content = content.replace('.gitbook/assets/', '../.gitbook/assets/')
+              # 3c. 画像パスを修正 → /images/ (Mintlify用)
+              if '.gitbook/assets/' in content:
+                  content = content.replace('../.gitbook/assets/', '/images/')
+                  content = content.replace('.gitbook/assets/', '/images/')
                   changed = True
 
               if changed:
@@ -94,6 +95,14 @@ jobs:
 
           print(f"Total: {fixed_count} files processed")
           PYEOF
+
+      - name: Copy images from .gitbook/assets to images/
+        run: |
+          if [ -d ".gitbook/assets" ]; then
+            mkdir -p images
+            cp -f .gitbook/assets/* images/ 2>/dev/null || true
+            echo "Copied images to images/"
+          fi
 
       - name: Check for changes
         id: changes

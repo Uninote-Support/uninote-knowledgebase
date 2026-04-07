@@ -10,16 +10,17 @@ on:
       translate_all:
         description: 'Translate all ja/ files (not just changed ones)'
         type: boolean
-        default: false
+        default: true
 
 jobs:
   translate:
     runs-on: ubuntu-latest
-    if: |
-      !contains(github.event.head_commit.message, 'auto:')
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      !contains(github.event.head_commit.message || '', 'auto:')
     permissions:
       contents: write
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repository
@@ -30,12 +31,13 @@ jobs:
       - name: Install dependencies
         run: pip install openai
 
-      - name: Translate changed files
+      - name: Translate files
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TRANSLATE_ALL: ${{ github.event.inputs.translate_all || 'false' }}
         run: |
           python3 - << 'PYEOF'
-          import os, sys, json, glob
+          import os, sys, json, glob, time
           from openai import OpenAI
 
           client = OpenAI()
@@ -89,7 +91,7 @@ jobs:
                       print(f"  Skip (too short): {fname}")
                       continue
 
-                  print(f"  Translating: {fname}...", end=" ", flush=True)
+                  print(f"  [{translated+failed+1}/{len(files)}] Translating: {fname}...", end=" ", flush=True)
 
                   response = client.chat.completions.create(
                       model="gpt-4o-mini",
@@ -98,7 +100,7 @@ jobs:
                           {"role": "user", "content": content}
                       ],
                       temperature=0.3,
-                      max_tokens=4096
+                      max_tokens=8192
                   )
 
                   translated_content = response.choices[0].message.content
@@ -116,65 +118,61 @@ jobs:
 
                   translated += 1
                   print("OK")
+                  time.sleep(1)
 
               except Exception as e:
                   failed += 1
                   print(f"FAILED: {e}")
+                  time.sleep(5)
 
           print(f"\nDone: {translated} translated, {failed} failed")
           PYEOF
 
-      - name: Update docs.json navigation for en/
+      - name: Mirror ja/ navigation structure to en/ in docs.json
         run: |
           python3 - << 'PYEOF'
-          import os, json, re
+          import os, json
 
-          # Read current docs.json
           with open("docs.json", "r", encoding="utf-8") as f:
               docs = json.load(f)
 
-          # Collect all en/*.md files
-          en_files = sorted([
-              f.replace(".md", "")
-              for f in os.listdir("en")
-              if f.endswith(".md") and f != "index.md"
-          ])
-
-          if not en_files:
-              print("No en/ files found, skipping nav update")
-              exit(0)
-
-          # Build en page list with en/ prefix
-          en_pages = [f"en/{f}" for f in en_files]
-
-          # Find the English tab in navigation
+          # Find ja and en tabs
           tabs = docs.get("navigation", {}).get("tabs", [])
+          ja_tab = None
           en_tab = None
           for tab in tabs:
-              if tab.get("tab") == "English":
+              if tab.get("tab") == "日本語":
+                  ja_tab = tab
+              elif tab.get("tab") == "English":
                   en_tab = tab
-                  break
 
-          if en_tab:
-              # Update English tab with all translated pages
-              en_tab["groups"] = [
-                  {
-                      "group": "Home",
-                      "pages": ["en/index"]
-                  },
-                  {
-                      "group": "Help Articles",
+          if not ja_tab or not en_tab:
+              print("Could not find both tabs")
+              exit(0)
+
+          # Mirror ja/ groups to en/, only including files that exist
+          en_groups = []
+          for group in ja_tab["groups"]:
+              en_pages = []
+              for page in group["pages"]:
+                  en_page = page.replace("ja/", "en/", 1)
+                  # Check if the en file exists (.md or .mdx)
+                  if os.path.exists(en_page + ".md") or os.path.exists(en_page + ".mdx"):
+                      en_pages.append(en_page)
+              if en_pages:
+                  en_groups.append({
+                      "group": group["group"],
                       "pages": en_pages
-                  }
-              ]
+                  })
 
-              with open("docs.json", "w", encoding="utf-8") as f:
-                  json.dump(docs, f, ensure_ascii=False, indent=2)
-                  f.write("\n")
+          en_tab["groups"] = en_groups
 
-              print(f"Updated English nav with {len(en_pages)} pages")
-          else:
-              print("English tab not found in docs.json")
+          with open("docs.json", "w", encoding="utf-8") as f:
+              json.dump(docs, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+
+          total_pages = sum(len(g["pages"]) for g in en_groups)
+          print(f"Updated English nav: {len(en_groups)} groups, {total_pages} pages")
           PYEOF
 
       - name: Check for changes

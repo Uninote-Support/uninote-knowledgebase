@@ -18,10 +18,10 @@ title: フォーマットを設定する
 1. ［エディター］画面を開きます。
 2.  ［フォーマット］の［+新しいフォーマット］をクリックします。<br />
 
-    <figure><img src="../.gitbook/assets/image (1) (1).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (1) (1).png" alt="" /><figcaption></figcaption></figure>
 3.  フォーマット名を入力し、［作成］をクリックします。<br />
 
-    <figure><img src="../.gitbook/assets/image (14).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (14).png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
@@ -36,7 +36,7 @@ title: フォーマットを設定する
    * デフォルトテンプレートをベースに、カスタムブロックを追加する
    *   テンプレートを使わず、カスタムブロックのみで構成する<br />
 
-       <figure><img src="../.gitbook/assets/image (15).png" alt="" /><figcaption></figcaption></figure>
+       <figure><img src="/images/image (15).png" alt="" /><figcaption></figcaption></figure>
 3. 追加するブロックの種類を選択します。
    * **プレーンテキスト**
    * **箇条書き**
@@ -47,7 +47,7 @@ title: フォーマットを設定する
    * 例：この会議の全体的な要約と最も重要なポイントを記述してください。
 5.  ［プレビュー］で要約のイメージを確認します。<br />
 
-    <figure><img src="../.gitbook/assets/image (16).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (16).png" alt="" /><figcaption></figcaption></figure>
 6. 問題なければ［更新］して完了です。
 
 <Note>デフォルトテンプレートの追加・削除・内容の変更はできません。テンプレートを選んだ後、その都度内容を編集することは可能です。</Note>
@@ -60,10 +60,10 @@ title: フォーマットを設定する
 1. Meetingsの［+新しいミーティング］（または対象ミーティング）を開きます。
 2.  ［Edit］をクリックします。<br />
 
-    <figure><img src="../.gitbook/assets/image (17).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (17).png" alt="" /><figcaption></figcaption></figure>
 3.  ［フォーマット］で作成したフォーマットを選び、更新します。<br />
 
-    <figure><img src="../.gitbook/assets/image (18).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (18).png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
@@ -75,10 +75,10 @@ title: フォーマットを設定する
 1. エディターで［カスタムフィールド］を開きます。<br />
 2.  ［+新しいフィールド］をクリックします。<br />
 
-    <figure><img src="../.gitbook/assets/image (21).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (21).png" alt="" /><figcaption></figcaption></figure>
 3.  フィールド名、フィールドID、フィールドタイプを設定し、適用するフォーマットを選択します。<br />
 
-    <figure><img src="../.gitbook/assets/image (22).png" alt="" /><figcaption></figcaption></figure>
+    <figure><img src="/images/image (22).png" alt="" /><figcaption></figcaption></figure>
 4. ［フィールドを追加］して完了です。
 
 ***
