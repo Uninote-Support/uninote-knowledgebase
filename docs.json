@@ -90,5 +90,6 @@
         ]
       }
     ]
-  }
+  },
+  "customJs": "/plain.js"
 }
