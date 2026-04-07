@@ -12,6 +12,14 @@
     "primary": "#5B4CFF"
   },
   "navigation": {
+    "groups": [
+      {
+        "group": "ホーム",
+        "pages": [
+          "index"
+        ]
+      }
+    ],
     "tabs": [
       {
         "tab": "日本語",
@@ -88,8 +96,7 @@
             "pages": [
               "ja/sutorjiganishitaradounarimasuka",
               "ja/puraibashporish",
-              "ja/yz",
-              "ja/SUMMARY"
+              "ja/yz"
             ]
           }
         ]
