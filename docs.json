@@ -1,5 +1,5 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Uninote Help",
   "logo": {
@@ -93,25 +93,16 @@
         ]
       },
       {
-        "redirects": [
-          {
-            "source": "/",
-            "destination": "/en",
-            "permanent": false
-          }
-        ]
-      },
-      {
         "language": "en",
         "groups": [
           {
-            "group": "ホーム",
+            "group": "Home",
             "pages": [
               "en/index"
             ]
           },
           {
-            "group": "スタートガイド",
+            "group": "Getting Started",
             "pages": [
               "en/wosuru",
               "en/yz-1",
@@ -121,7 +112,7 @@
             ]
           },
           {
-            "group": "アカウント・ログイン",
+            "group": "Account & Login",
             "pages": [
               "en/akauntonowosurunihadousurebaiidesuka",
               "en/woketaradouyatteroguinshimasuka",
@@ -129,7 +120,7 @@
             ]
           },
           {
-            "group": "カレンダー・ミーティング",
+            "group": "Calendar & Meetings",
             "pages": [
               "en/taguwosuru",
               "en/forudawosuru",
@@ -138,13 +129,13 @@
             ]
           },
           {
-            "group": "プラン・請求",
+            "group": "Plan & Billing",
             "pages": [
               "en/nohadonokuraidesuka"
             ]
           },
           {
-            "group": "WIPページ",
+            "group": "WIP Pages",
             "pages": [
               "en/wipmonitnoi",
               "en/wipyzgurpuwosuru"
@@ -154,5 +145,12 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/ja",
+      "permanent": false
+    }
+  ],
   "customJs": "/plain.js"
 }
