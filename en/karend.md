@@ -1,0 +1,16 @@
+---
+title: Calendar
+---
+
+<Note>The calendar screen allows you to import and manage meeting schedules by integrating with Google / Microsoft Calendar.</Note>
+
+## Features
+
+* Synchronization with Google / Microsoft Calendar
+* Creating and editing meetings on the calendar
+* Automatic entry settings for the recording Bot
+
+## Related Pages
+
+* [Synchronizing the Calendar (Google / Microsoft)](/ja/karendwosurugoogle-microsoft)
+* [How to Enter the Recording Bot and Limits on Recording Time](/ja/botnotononitsuite)
