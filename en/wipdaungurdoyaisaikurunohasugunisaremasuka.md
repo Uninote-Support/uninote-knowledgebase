@@ -34,5 +34,5 @@ The following operations will all be in a "scheduled" state and will take effect
 
 ### Related Pages
 
-* [How is the fee calculated if I change my plan midway?](/ja/puranwodeshitahadousaremasuka)
-* [How can I downgrade my plan?](/ja/wippuranwodaungurdosurunihadousurebaiidesuka)
+* [How is the fee calculated if I change my plan midway?](/en/puranwodeshitahadousaremasuka)
+* [How can I downgrade my plan?](/en/wippuranwodaungurdosurunihadousurebaiidesuka)

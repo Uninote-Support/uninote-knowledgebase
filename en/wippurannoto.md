@@ -36,4 +36,4 @@ Uninote offers six plans: **Free, Lite, Team, Business, Pro, and Enterprise**. E
 
 ## Related Pages
 
-* [How is the fee calculated if I change my plan mid-term?](/ja/puranwodeshitahadousaremasuka)
+* [How is the fee calculated if I change my plan mid-term?](/en/puranwodeshitahadousaremasuka)

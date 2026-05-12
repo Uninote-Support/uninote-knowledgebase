@@ -62,6 +62,6 @@ If you want to change to another role, please edit the role from the [Users] scr
 
 ***
 
-👤 For information for invited users, see: [**How do I log in after receiving an invitation?**](/ja/woketaradouyatteroguinshimasuka)
+👤 For information for invited users, see: [**How do I log in after receiving an invitation?**](/en/woketaradouyatteroguinshimasuka)
 
-🔐 Related: [**What are the types and differences of roles (permissions)?**](/ja/rrunotoihadesuka)
+🔐 Related: [**What are the types and differences of roles (permissions)?**](/en/rrunotoihadesuka)

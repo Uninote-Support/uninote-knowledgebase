@@ -12,7 +12,7 @@ There are two methods to have the bot join the meeting.
 
 ### Method 1: Use Calendar Integration (Automatic Joining)
 
-1. Set up the [calendar integration](/ja/karendwosurugoogle-microsoft) in advance.
+1. Set up the [calendar integration](/en/karendwosurugoogle-microsoft) in advance.
 2. At the meeting start time, the bot will automatically attempt to join the meeting URL.
 3. Click "Approve" displayed in the meeting to allow the bot to join.
 
@@ -45,5 +45,5 @@ There are two methods to have the bot join the meeting.
 
 ## Related Pages
 
-* [Sync Calendar (Google / Microsoft)](/ja/karendwosurugoogle-microsoft)
-* [What is the maximum recording time?](/ja/nohadonokuraidesuka)
+* [Sync Calendar (Google / Microsoft)](/en/karendwosurugoogle-microsoft)
+* [What is the maximum recording time?](/en/nohadonokuraidesuka)

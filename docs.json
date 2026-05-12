@@ -122,12 +122,19 @@
             "pages": [
               "en/akauntonowosurunihadousurebaiidesuka",
               "en/woketaradouyatteroguinshimasuka",
-              "en/pasuwdoworeteshimattatokihadousurebaiidesuka"
+              "en/pasuwdoworeteshimattatokihadousurebaiidesuka",
+              "en/google-microsoft-akauntoderoguinshitapasuwdohadekimasuka",
+              "en/rrunotoihadesuka",
+              "en/she-ding"
             ]
           },
           {
             "group": "Calendar & Meetings",
             "pages": [
+              "en/karend",
+              "en/mtingu",
+              "en/monit",
+              "en/edit",
               "en/taguwosuru",
               "en/forudawosuru",
               "en/niwosuru",
@@ -135,16 +142,44 @@
             ]
           },
           {
+            "group": "AI & Format",
+            "pages": [
+              "en/puronputotokasutamufrudonoihanandesuka",
+              "en/hayzdesuka"
+            ]
+          },
+          {
             "group": "Plan & Billing",
             "pages": [
-              "en/nohadonokuraidesuka"
+              "en/li-yong-gui-yue",
+              "en/nohadonokuraidesuka",
+              "en/kurejittohadonoyounisaremasuka",
+              "en/puranwodeshitahadousaremasuka",
+              "en/raisensu"
+            ]
+          },
+          {
+            "group": "FAQ",
+            "pages": [
+              "en/faq-yi-lan"
             ]
           },
           {
             "group": "WIP Pages",
             "pages": [
+              "en/wipdaungurdoyaisaikurunohasugunisaremasuka",
               "en/wipmonitnoi",
+              "en/wippurannoto",
+              "en/wippuranwodaungurdosurunihadousurebaiidesuka",
               "en/wipyzgurpuwosuru"
+            ]
+          },
+          {
+            "group": "Other",
+            "pages": [
+              "en/sutorjiganishitaradounarimasuka",
+              "en/puraibashporish",
+              "en/yz"
             ]
           }
         ]

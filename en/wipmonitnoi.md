@@ -18,4 +18,4 @@ The monitor screen allows you to check ongoing meetings in real-time.
 
 ## Related Pages
 
-* [How to Join the Recording Bot and the Time Limit for Recordings](/ja/botnotononitsuite)
+* [How to Join the Recording Bot and the Time Limit for Recordings](/en/botnotononitsuite)

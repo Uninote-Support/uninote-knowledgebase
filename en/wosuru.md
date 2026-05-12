@@ -39,4 +39,4 @@ title: Create an Organization
 
 Once the creation is complete, proceed to invite users.
 
-→ 1️⃣ [Add Users (Invite)](/ja/yz-1)
+→ 1️⃣ [Add Users (Invite)](/en/yz-1)

@@ -69,7 +69,8 @@ jobs:
           Rules:
           - Preserve ALL markdown syntax exactly (headings, links, images, code blocks, frontmatter)
           - Translate the frontmatter 'title' and 'description' fields
-          - Do NOT translate URLs, file paths, image paths, or code
+          - For internal links: convert "/ja/..." paths to "/en/..." (e.g., "[link](/ja/foo)" → "[link](/en/foo)")
+          - Do NOT translate external URLs (https://...), image paths, file paths, or code
           - Do NOT add or remove any content
           - Keep the same document structure
           - Use clear, concise technical English suitable for admin users
@@ -133,46 +134,53 @@ jobs:
           python3 - << 'PYEOF'
           import os, json
 
+          # Mintlify uses navigation.languages[].language structure
+          # (not navigation.tabs[].tab). Mirror ja groups to en groups,
+          # translating group names and including only files that exist.
+
+          GROUP_MAP = {
+              "ホーム": "Home",
+              "スタートガイド": "Getting Started",
+              "アカウント・ログイン": "Account & Login",
+              "カレンダー・ミーティング": "Calendar & Meetings",
+              "AI・フォーマット": "AI & Format",
+              "プラン・請求": "Plan & Billing",
+              "よくある質問": "FAQ",
+              "WIPページ": "WIP Pages",
+              "その他": "Other",
+              "未分類": "Uncategorized",
+          }
+
           with open("docs.json", "r", encoding="utf-8") as f:
               docs = json.load(f)
 
-          # Find ja and en tabs
-          tabs = docs.get("navigation", {}).get("tabs", [])
-          ja_tab = None
-          en_tab = None
-          for tab in tabs:
-              if tab.get("tab") == "日本語":
-                  ja_tab = tab
-              elif tab.get("tab") == "English":
-                  en_tab = tab
+          languages = docs.get("navigation", {}).get("languages", [])
+          ja_cfg = next((l for l in languages if l.get("language") == "ja"), None)
+          en_cfg = next((l for l in languages if l.get("language") == "en"), None)
 
-          if not ja_tab or not en_tab:
-              print("Could not find both tabs")
-              exit(0)
+          if not ja_cfg or not en_cfg:
+              print("Could not find both ja and en language configs")
+              raise SystemExit(0)
 
-          # Mirror ja/ groups to en/, only including files that exist
-          en_groups = []
-          for group in ja_tab["groups"]:
+          new_en_groups = []
+          for ja_group in ja_cfg["groups"]:
+              en_group_name = GROUP_MAP.get(ja_group["group"], ja_group["group"])
               en_pages = []
-              for page in group["pages"]:
+              for page in ja_group["pages"]:
                   en_page = page.replace("ja/", "en/", 1)
-                  # Check if the en file exists (.md or .mdx)
                   if os.path.exists(en_page + ".md") or os.path.exists(en_page + ".mdx"):
                       en_pages.append(en_page)
               if en_pages:
-                  en_groups.append({
-                      "group": group["group"],
-                      "pages": en_pages
-                  })
+                  new_en_groups.append({"group": en_group_name, "pages": en_pages})
 
-          en_tab["groups"] = en_groups
+          en_cfg["groups"] = new_en_groups
 
           with open("docs.json", "w", encoding="utf-8") as f:
               json.dump(docs, f, ensure_ascii=False, indent=2)
               f.write("\n")
 
-          total_pages = sum(len(g["pages"]) for g in en_groups)
-          print(f"Updated English nav: {len(en_groups)} groups, {total_pages} pages")
+          total = sum(len(g["pages"]) for g in new_en_groups)
+          print(f"Updated en nav: {len(new_en_groups)} groups, {total} pages")
           PYEOF
 
       - name: Check for changes

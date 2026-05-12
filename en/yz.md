@@ -12,7 +12,7 @@ title: Users
 
 ## Related Pages
 
-* [Add User (Invite)](/ja/yz-1)
-* [How do I log in after receiving an invitation?](/ja/woketaradouyatteroguinshimasuka)
-* [What are the types and differences of roles (permissions)?](/ja/rrunotoihadesuka)
-* [Set up User Groups](/ja/wipyzgurpuwosuru)
+* [Add User (Invite)](/en/yz-1)
+* [How do I log in after receiving an invitation?](/en/woketaradouyatteroguinshimasuka)
+* [What are the types and differences of roles (permissions)?](/en/rrunotoihadesuka)
+* [Set up User Groups](/en/wipyzgurpuwosuru)

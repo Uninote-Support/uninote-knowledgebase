@@ -60,4 +60,4 @@ title: Creating a Folder (Meeting Storage)
 
 ### Related Pages
 
-* [Edit or Delete a Folder](/ja/forudawosuru)
+* [Edit or Delete a Folder](/en/forudawosuru)

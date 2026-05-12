@@ -85,5 +85,5 @@ title: Set Up Formats
 
 ### Further Utilization
 
-* 🏷️ [**Create and Manage Tags**](/ja/taguwosuru)
-* 📚 [**Register Words in the Dictionary**](/ja/niwosuru)
+* 🏷️ [**Create and Manage Tags**](/en/taguwosuru)
+* 📚 [**Register Words in the Dictionary**](/en/niwosuru)

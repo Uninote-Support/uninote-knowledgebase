@@ -12,10 +12,10 @@ title: License
 
 ## Related Pages
 
-* [Plan Comparison and Feature List](/ja/wippurannoto)
-* [Is the pricing pay-as-you-go (per user)?](/ja/hayzdesuka)
-* [How are credits consumed?](/ja/kurejittohadonoyounisaremasuka)
-* [How is the fee calculated if I change my plan midway?](/ja/puranwodeshitahadousaremasuka)
-* [How can I downgrade my plan?](/ja/wippuranwodaungurdosurunihadousurebaiidesuka)
-* [Will downgrades and payment cycle changes be reflected immediately?](/ja/wipdaungurdoyaisaikurunohasugunisaremasuka)
-* [What happens when storage reaches its limit?](/ja/sutorjiganishitaradounarimasuka)
+* [Plan Comparison and Feature List](/en/wippurannoto)
+* [Is the pricing pay-as-you-go (per user)?](/en/hayzdesuka)
+* [How are credits consumed?](/en/kurejittohadonoyounisaremasuka)
+* [How is the fee calculated if I change my plan midway?](/en/puranwodeshitahadousaremasuka)
+* [How can I downgrade my plan?](/en/wippuranwodaungurdosurunihadousurebaiidesuka)
+* [Will downgrades and payment cycle changes be reflected immediately?](/en/wipdaungurdoyaisaikurunohasugunisaremasuka)
+* [What happens when storage reaches its limit?](/en/sutorjiganishitaradounarimasuka)

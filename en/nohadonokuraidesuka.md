@@ -14,4 +14,4 @@ Once 3 hours have elapsed, the recording Bot will automatically leave the meetin
 
 ## Related Pages
 
-* [How to join the recording Bot and the maximum recording time](/ja/botnotononitsuite)
+* [How to join the recording Bot and the maximum recording time](/en/botnotononitsuite)

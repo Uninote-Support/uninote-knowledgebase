@@ -12,7 +12,7 @@ title: Settings
 
 ## Related Pages
 
-* [How can I change my account name?](/ja/akauntonowosurunihadousurebaiidesuka)
-* [What should I do if I forgot my password?](/ja/pasuwdoworeteshimattatokihadousurebaiidesuka)
-* [If I log in with a Google / Microsoft account, can I set a password?](/ja/google-microsoft-akauntoderoguinshitapasuwdohadekimasuka)
-* [What are the types and differences of roles (permissions)?](/ja/rrunotoihadesuka)
+* [How can I change my account name?](/en/akauntonowosurunihadousurebaiidesuka)
+* [What should I do if I forgot my password?](/en/pasuwdoworeteshimattatokihadousurebaiidesuka)
+* [If I log in with a Google / Microsoft account, can I set a password?](/en/google-microsoft-akauntoderoguinshitapasuwdohadekimasuka)
+* [What are the types and differences of roles (permissions)?](/en/rrunotoihadesuka)

@@ -12,5 +12,5 @@ title: Calendar
 
 ## Related Pages
 
-* [Synchronizing the Calendar (Google / Microsoft)](/ja/karendwosurugoogle-microsoft)
-* [How to Enter the Recording Bot and Limits on Recording Time](/ja/botnotononitsuite)
+* [Synchronizing the Calendar (Google / Microsoft)](/en/karendwosurugoogle-microsoft)
+* [How to Enter the Recording Bot and Limits on Recording Time](/en/botnotononitsuite)

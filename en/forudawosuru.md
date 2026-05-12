@@ -35,4 +35,4 @@ title: Edit and Delete Folders
 
 ### Related Pages
 
-* [Create a Folder (Meeting Storage)](/ja/forudamtingunokiwosuru)
+* [Create a Folder (Meeting Storage)](/en/forudamtingunokiwosuru)

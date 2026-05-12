@@ -11,7 +11,7 @@ title: Editor
 
 ## Related Pages
 
-* [Set Formats](/ja/fmattowosuru)
-* [What is the difference between prompts and custom fields?](/ja/puronputotokasutamufrudonoihanandesuka)
-* [Create and Manage Tags](/ja/taguwosuru)
-* [Register Words in the Dictionary](/ja/niwosuru)
+* [Set Formats](/en/fmattowosuru)
+* [What is the difference between prompts and custom fields?](/en/puronputotokasutamufrudonoihanandesuka)
+* [Create and Manage Tags](/en/taguwosuru)
+* [Register Words in the Dictionary](/en/niwosuru)

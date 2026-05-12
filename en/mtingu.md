@@ -12,7 +12,7 @@ title: Meetings
 
 ## Related Pages
 
-* [Create a folder (for storing meetings)](/ja/forudamtingunokiwosuru)
-* [Edit or delete a folder](/ja/forudawosuru)
-* [Create and manage tags](/ja/taguwosuru)
-* [How to invite the recording bot and the maximum recording duration](/ja/botnotononitsuite)
+* [Create a folder (for storing meetings)](/en/forudamtingunokiwosuru)
+* [Edit or delete a folder](/en/forudawosuru)
+* [Create and manage tags](/en/taguwosuru)
+* [How to invite the recording bot and the maximum recording duration](/en/botnotononitsuite)

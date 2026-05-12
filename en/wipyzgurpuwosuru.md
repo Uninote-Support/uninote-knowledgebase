@@ -37,4 +37,4 @@ When inviting new users, you can set the user group on the invitation screen.
 
 ## Related Pages
 
-* [Add User (Invite)](/ja/yz-1)
+* [Add User (Invite)](/en/yz-1)

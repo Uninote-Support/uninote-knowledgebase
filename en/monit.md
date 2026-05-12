@@ -11,5 +11,5 @@ title: Monitor
 
 ## Related Pages
 
-* [How to Use the Monitor Screen](/ja/wipmonitnoi)
-* [How to Join the Recording Bot and the Maximum Recording Time](/ja/botnotononitsuite)
+* [How to Use the Monitor Screen](/en/wipmonitnoi)
+* [How to Join the Recording Bot and the Maximum Recording Time](/en/botnotononitsuite)

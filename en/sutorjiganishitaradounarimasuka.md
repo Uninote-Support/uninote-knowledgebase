@@ -33,4 +33,4 @@ Additionally, pre-notification emails will be sent **one week** and **the day be
 
 ### Related Pages
 
-* [How can I downgrade my plan?](/ja/wippuranwodaungurdosurunihadousurebaiidesuka)
+* [How can I downgrade my plan?](/en/wippuranwodaungurdosurunihadousurebaiidesuka)

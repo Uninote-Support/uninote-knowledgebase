@@ -50,4 +50,4 @@ The prorated difference from the change date to the end of the month will be cha
 
 ### Related Pages
 
-* [Are downgrades or changes to the payment cycle reflected immediately?](/ja/wipdaungurdoyaisaikurunohasugunisaremasuka)
+* [Are downgrades or changes to the payment cycle reflected immediately?](/en/wipdaungurdoyaisaikurunohasugunisaremasuka)

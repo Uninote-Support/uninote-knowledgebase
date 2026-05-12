@@ -34,5 +34,5 @@ If neither condition is met, the downgrade reservation operation will result in 
 
 ### Related Pages
 
-* [Will downgrades and payment cycle changes take effect immediately?](/ja/wipdaungurdoyaisaikurunohasugunisaremasuka)
-* [What happens when storage reaches its limit?](/ja/sutorjiganishitaradounarimasuka)
+* [Will downgrades and payment cycle changes take effect immediately?](/en/wipdaungurdoyaisaikurunohasugunisaremasuka)
+* [What happens when storage reaches its limit?](/en/sutorjiganishitaradounarimasuka)

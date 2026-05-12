@@ -30,4 +30,4 @@ title: What should I do if I forgot my password?
 
 ### Related Pages
 
-* [Can I set a password if I logged in with a Google / Microsoft account?](/ja/google-microsoft-akauntoderoguinshitapasuwdohadekimasuka)
+* [Can I set a password if I logged in with a Google / Microsoft account?](/en/google-microsoft-akauntoderoguinshitapasuwdohadekimasuka)
